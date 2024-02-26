@@ -164,7 +164,7 @@ class BridgeProvider(BaseProvider):
             if last_id and id <= last_id:
                 _LOGGER.error(
                     f'Received event id (={id}) must be greater than stored last wallet event id (={last_id})')
-                return
+                #return
 
             if 'event' in wallet_message and wallet_message['event'] != 'connect':
                 await self._storage.setLastWalletEventId(id)
